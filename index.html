@@ -12,10 +12,8 @@
         <header class="d-flex justify-content-center py-3">
           <ul class="nav nav-pills">
             <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#minecraft-plugins" class="nav-link">Plugins</a></li>
+            <li class="nav-item"><a href="#servers" class="nav-link">Server</a></li>
           </ul>
         </header>
       </div>
@@ -29,14 +27,14 @@
             <p class="lead"><p>
               I'm Roshan, a creative coder proficient in C, C++, Java, HTML, and CSS. With a proven track record of developing popular Minecraft plugins that have amassed over 4,000 downloads, I am deeply passionate about seamlessly blending creativity with technology to elevate gameplay experiences. As a committed community-driven developer, I am a quick learner who finds inspiration in observing the prowess of code in action</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Discord</button>
+              <a href="https://discord.gg/UcsJEtTvQj"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Discord</button></a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="container px-4 pb-2" id="minecraft-plugins">
-        <h2 class="pb-2 border-bottom">Minecraft Plugins By Hmmbo</h2>
+        <h2 class="pb-2 border-bottom">Our Minecraft Plugins</h2>
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
           <div class="col d-flex align-items-start">
             <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
@@ -50,7 +48,7 @@
                 Customize regions, drop items, and more. Trusted by thousands, endorsed by YouTubers.
                  Elevate your server's gameplay today.
               </p>
-              <a href="#" class="btn btn-primary">
+              <a href="https://www.spigotmc.org/resources/mine-x-farm-regen-1-17-1-20.107060/" class="btn btn-primary">
                 Download
               </a>
             </div>
@@ -66,7 +64,7 @@
                 enrich drops, and fine-tune gameplay.
             </p>
 
-              <a href="#" class="btn btn-warning">
+              <a href="https://www.spigotmc.org/resources/ultimate-blockregen.110552/" class="btn btn-warning">
                 Buy Now
               </a>
             </div>
@@ -75,13 +73,13 @@
         </div>
       </div>
       <div class="container px-4 py-5">
-        <h2 class="pb-2 border-bottom">Minecraft Server's</h2>
+        <h2 class="pb-2 border-bottom" id="servers">Our Minecraft Server's</h2>
     
         <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
           <div class="col d-flex flex-column align-items-start gap-2">
-            <h3 class="fw-bold text-body-emphasis">Play.Artic.Fun</h3>
+            <h3 class="fw-bold text-body-emphasis" id="copyText">Play.Artic.Fun 🗒</h3>
             <p class="text-body-secondary">A economy survial server with custom bosses, arenas, anti grief and many more featurs to make the survival worthy of your time.</p>
-            <a href="#" class="btn btn-primary btn-lg">Server Discord</a>
+            <a href="https://discord.gg/aERMAVtaCS" class="btn btn-primary btn-lg">Server Discord</a>
           </div>
     
           <div class="col">
@@ -114,45 +112,71 @@
         </div>
        
         <div class="col mb-1" >
-          <h5>Social Media</h5>
+          <h5>Quick Links</h5>
           <ul class="nav flex-column">
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+            <li class="nav-item mb-2"><a href="#minecraft-plugins" class="nav-link p-0 text-body-secondary">Plugins</a></li>
+            <li class="nav-item mb-2"><a href="#servers" class="nav-link p-0 text-body-secondary">Server</a></li>
+            <li class="nav-item mb-2"><a href="https://discord.gg/UcsJEtTvQj" class="nav-link p-0 text-body-secondary">Discord</a></li>
           </ul>
         </div>
     
       
       </footer>
       <script>
-        const typingContainer = document.getElementById('typing-text');
-        const textToType = [
-            "Hello, I'm Hmmbo.",
-            "Also Known As Roshan",
-            "Developer Who Loves Coding"
-        ];
+      const typingContainer = document.getElementById('typing-text');
+    const textToType = [
+        "Myself Hmmbo",
+        "Also Known As Roshan",
+        "Developer Who Loves Coding."
+    ];
 
-        let textIndex = 0;
-        let currentIndex = 0;
+    let textIndex = 0;
+    let currentIndex = 0;
 
-        function typeText() {
-            if (textIndex < textToType.length) {
-                typingContainer.textContent = textToType[textIndex].slice(0, currentIndex + 1);
-                currentIndex++;
+    function typeText() {
+        if (currentIndex < textToType[textIndex].length) {
+            typingContainer.textContent = textToType[textIndex].slice(0, currentIndex + 1);
+            currentIndex++;
+        } else {
+            clearInterval(typingInterval);
 
-                if (currentIndex < textToType[textIndex].length) {
-                    setTimeout(typeText, 100); // Adjust typing speed (milliseconds)
-                } else {
-                    textIndex++;
-                    currentIndex = 0;
-                    setTimeout(typeText, 1000); // Delay between phrases (milliseconds)
-                }
-            }
+            setTimeout(() => {
+                currentIndex = 0;
+                textIndex = (textIndex + 1) % textToType.length;
+                typingInterval = setInterval(typeText, 100);
+            }, 1000);
         }
+    }
 
-        typeText();
+    let typingInterval = setInterval(typeText, 100);
+        const copyTextElement = document.getElementById('copyText');
+        
+        copyTextElement.addEventListener('click', () => {
+            const textToCopy = copyTextElement.textContent;
+            
+            // Create a temporary textarea element to copy text
+            const textarea = document.createElement('textarea');
+            textarea.value = textToCopy.slice(0,14);
+            document.body.appendChild(textarea);
+            
+            // Select the text inside the textarea
+            textarea.select();
+            
+            // Execute the copy command
+            document.execCommand('copy');
+            
+            // Remove the temporary textarea
+            document.body.removeChild(textarea);
+            
+            // Update the text to show copied message
+            copyTextElement.textContent = 'IP Copied To Clipboard!';
+            
+            // Reset the text after a brief delay
+            setTimeout(() => {
+                copyTextElement.textContent = textToCopy;
+            }, 500); // Adjust the delay time (milliseconds)
+        });
     </script>
 </body>
 </html>
